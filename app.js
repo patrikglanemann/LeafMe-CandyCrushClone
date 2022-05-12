@@ -41,26 +41,19 @@ squares.forEach((square) => square.addEventListener("drop", dragDrop));
 function dragStart() {
   colorBeingDragged = this.style.backgroundImage;
   squareIdBeingDragged = parseInt(this.id);
-  console.log(colorBeingDragged);
-  console.log(this.id, "dragstart");
 }
 
 function dragOver(e) {
   e.preventDefault();
-  console.log(this.id, "dragover");
 }
 
 function dragEnter(e) {
   e.preventDefault();
-  console.log(this.id, "dragenter");
 }
 
-function dragLeave() {
-  console.log(this.id, "dragleave");
-}
+function dragLeave() {}
 
 function dragEnd() {
-  console.log(this.id, "dragend");
   let validMoves = [
     squareIdBeingDragged - 1,
     squareIdBeingDragged + 1,
@@ -87,7 +80,6 @@ function dragEnd() {
 }
 
 function dragDrop() {
-  console.log(this.id, "dragdrop");
   colorBeingReplaced = this.style.backgroundImage;
   squareIdBeingReplaced = parseInt(this.id);
   this.style.backgroundImage = colorBeingDragged;
