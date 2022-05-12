@@ -1,0 +1,12 @@
+.gameGrid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 560px;
+  width: 560px;
+}
+
+.gameGrid div {
+  height: 70px;
+  width: 70px;
+  background-size: 70px;
+}
