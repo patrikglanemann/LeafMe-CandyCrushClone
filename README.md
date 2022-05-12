@@ -1,6 +1,6 @@
 # Leaf Me
 
-### Leaf Me is a minimalistic Candy Crush copy made with vanilla JavaScript, HTML, CSS.
+### Leaf Me is a minimalistic Candy Crush clone made with vanilla JavaScript, HTML, CSS.
 
 ---
 
