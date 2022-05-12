@@ -1,9 +1,10 @@
 const grid = document.querySelector(".gameGrid");
+const scoreDisplay = document.getElementById("score");
 const width = 8;
 const squares = [];
 let score = 0;
 
-const leafColours = [
+const leafColors = [
   "url(assets/LeafBlue.png)",
   "url(assets/LeafGreen.png)",
   "url(assets/LeafOrange.png)",
@@ -17,8 +18,8 @@ function createBoard() {
     const square = document.createElement("div");
     square.setAttribute("draggable", true);
     square.setAttribute("id", i);
-    let randomColour = Math.floor(Math.random() * leafColours.length);
-    square.style.backgroundImage = leafColours[randomColour];
+    let randomColour = Math.floor(Math.random() * leafColors.length);
+    square.style.backgroundImage = leafColors[randomColour];
     grid.appendChild(square);
     squares.push(square);
   }
@@ -107,6 +108,7 @@ function checkRowForThree() {
         )
       ) {
         score += 3;
+        scoreDisplay.innerHTML = score;
         rowOfThree.forEach((index) => {
           squares[index].style.backgroundImage = "";
         });
@@ -129,6 +131,7 @@ function checkColumnForThree() {
       )
     ) {
       score += 3;
+      scoreDisplay.innerHTML = score;
       columnOfThree.forEach((index) => {
         squares[index].style.backgroundImage = "";
       });
@@ -146,8 +149,8 @@ function moveDown() {
       const firstRow = [0, 1, 2, 3, 4, 5, 6, 7];
       const isFirstRow = firstRow.includes(i);
       if (isFirstRow && squares[i].style.backgroundImage === "") {
-        let randomColour = Math.floor(Math.random() * leafColours.length);
-        squares[i].style.backgroundImage = leafColours[randomColour];
+        let randomColour = Math.floor(Math.random() * leafColors.length);
+        squares[i].style.backgroundImage = leafColors[randomColour];
       }
     }
   }
