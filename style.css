@@ -1,12 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(assets/Forest.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gameContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: end;
+  justify-items: right;
+  gap: 1rem;
+  margin-top: 10rem;
+}
+
 .gameGrid {
   display: flex;
   flex-wrap: wrap;
   height: 560px;
   width: 560px;
+  padding: 1.5rem;
+  background-color: #aca3a369;
+  border-radius: 50px;
+  box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.25),
+    inset 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .gameGrid div {
   height: 70px;
   width: 70px;
   background-size: 70px;
+}
+
+.headline {
+  background-image: url(assets/LeafMeTxt.png);
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 350px;
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+}
+
+.scoreContainer {
+  height: fit-content;
+  width: fit-content;
+  padding: 0.5rem 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ce833d;
+  background-color: #aca3a325;
+  border-radius: 40px;
+  box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.25),
+    inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.scoreContainer h2 {
+  margin: 0;
+}
+
+.icons {
+  height: fit-content;
+  width: fit-content;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-self: left;
+  background-color: #aca3a325;
+  border-radius: 40px;
+  box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.25),
+    inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
 }
